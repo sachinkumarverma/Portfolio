@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { Monitor, Code2, Cloud, Database } from "lucide-react";
+import { Monitor, Code2, Database, Smartphone, FlaskConical, Wrench } from "lucide-react";
 import { skillsData } from "../data/portfolio";
 import SectionHeader from "./SectionHeader";
 
-const iconMap = { Monitor, Code2, Cloud, Database };
+const iconMap = { Monitor, Code2, Database, Smartphone, FlaskConical, Wrench };
 
 export default function Skills() {
   return (

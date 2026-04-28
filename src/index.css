@@ -49,6 +49,10 @@
   --selection-bg: rgba(6, 182, 212, 0.35);
   --scrollbar-track: #050b18;
   --scrollbar-thumb: #1e3a5f;
+
+  --hero-size: 280px;
+  --hero-inset-1: 20px;
+  --hero-inset-2: 35px;
 }
 
 [data-theme="light"] {
@@ -96,6 +100,22 @@
   --selection-bg: rgba(6, 182, 212, 0.2);
   --scrollbar-track: #f1f5f9;
   --scrollbar-thumb: #cbd5e1;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --hero-size: 340px;
+    --hero-inset-1: 25px;
+    --hero-inset-2: 45px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --hero-size: 400px;
+    --hero-inset-1: 30px;
+    --hero-inset-2: 50px;
+  }
 }
 
 /* ========================
@@ -593,8 +613,8 @@ body {
 }
 
 .hero-content { flex: 1; max-width: 640px; }
-.hero-visual { flex-shrink: 0; display: none; }
-@media (min-width: 1024px) { .hero-visual { display: block; } }
+.hero-visual { flex-shrink: 0; display: block; order: -1; }
+@media (min-width: 1024px) { .hero-visual { order: 0; } }
 
 /* ========================
    PROFILE PIC

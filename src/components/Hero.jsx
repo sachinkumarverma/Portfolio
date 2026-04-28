@@ -98,7 +98,7 @@ export default function Hero() {
             className="hero-visual"
             style={{ position: "relative" }}
           >
-            <div style={{ position: "relative", width: 400, height: 400 }}>
+            <div style={{ position: "relative", width: "var(--hero-size)", height: "var(--hero-size)", margin: "0 auto" }}>
               {/* Outer ring */}
               <motion.div
                 animate={{ rotate: 360 }}
@@ -111,21 +111,14 @@ export default function Hero() {
               <motion.div
                 animate={{ rotate: -360 }}
                 transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
-                style={{ position: "absolute", inset: 30, borderRadius: "50%", border: "1px solid var(--hero-orb2)" }}
+                style={{ position: "absolute", inset: "var(--hero-inset-1)", borderRadius: "50%", border: "1px solid var(--hero-orb2)" }}
               >
                 <div style={{ position: "absolute", bottom: 0, left: "50%", transform: "translate(-50%, 50%)", width: 8, height: 8, borderRadius: "50%", background: "#60a5fa", boxShadow: "0 0 10px rgba(59,130,246,0.5)" }} />
               </motion.div>
-              {/* Inner ring */}
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
-                style={{ position: "absolute", inset: 60, borderRadius: "50%", border: "1px solid rgba(99, 102, 241, 0.1)" }}
-              />
-
               {/* Center - Profile picture or fallback */}
               <div style={{
                 position: "absolute",
-                inset: 75,
+                inset: "var(--hero-inset-2)",
                 borderRadius: "50%",
                 background: `linear-gradient(135deg, rgba(6,182,212,0.06), rgba(59,130,246,0.06))`,
                 border: "2px solid var(--hero-ring)",

@@ -10,9 +10,7 @@ export default function Experience() {
         <SectionHeader number="02" label="EXPERIENCE" title="Professional Journey" />
 
         <div className="timeline">
-          <div className="timeline-line" />
-
-          <div style={{ display: "flex", flexDirection: "column", gap: 64 }}>
+          <div className="timeline-items">
             {experienceData.map((exp, i) => (
               <motion.div
                 key={exp.id}
@@ -23,6 +21,11 @@ export default function Experience() {
                 className="timeline-item"
                 style={{ position: "relative" }}
               >
+                {/* Connecting line between dots only (doesn't go above first or below last dot) */}
+                {i < experienceData.length - 1 && (
+                  <div className="timeline-connector" />
+                )}
+
                 <div className="timeline-date">
                   <div style={{
                     display: "inline-block", padding: "8px 16px", borderRadius: 12,
@@ -42,7 +45,6 @@ export default function Experience() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.3 + i * 0.15, type: "spring" }}
                   className={`timeline-dot ${exp.type === "current" ? "timeline-dot-active" : "timeline-dot-inactive"}`}
-                  style={{ top: 8 }}
                 />
 
                 <div className="timeline-card">

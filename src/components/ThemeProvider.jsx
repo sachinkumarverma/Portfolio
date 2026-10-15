@@ -8,14 +8,23 @@ export function useTheme() {
 
 export default function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => {
-    const saved = localStorage.getItem("portfolio-theme");
-    if (saved) return saved;
-    return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+    try {
+      const saved = localStorage.getItem("portfolio-theme");
+      if (saved === "light" || saved === "dark") return saved;
+      localStorage.setItem("portfolio-theme", "dark");
+      return "dark";
+    } catch {
+      return "dark";
+    }
   });
 
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("portfolio-theme", theme);
+    try {
+      document.documentElement.setAttribute("data-theme", theme);
+      localStorage.setItem("portfolio-theme", theme);
+    } catch {
+      // Ignore if localStorage is restricted
+    }
   }, [theme]);
 
   const toggle = () => setTheme((t) => (t === "dark" ? "light" : "dark"));

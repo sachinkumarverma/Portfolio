@@ -2,7 +2,8 @@ export const personalInfo = {
   name: "Sachin Kumar Verma",
   initials: "SV",
   title: "FULL STACK DEVELOPER",
-  subtitle: "React & Node.js Specialist | Mobile & Web",
+  subtitle:
+    "Full-Stack Engineer at Argusoft building reliable web and mobile products with React, Node.js, and React Native.",
   description:
     "Specializing in React, Node.js, and cross-platform mobile development. I build performant, test-driven applications with clean architecture and modern best practices.",
   location: "India",
@@ -11,6 +12,7 @@ export const personalInfo = {
   linkedin: "https://linkedin.com/in/sachin-kumar-verma",
   resumeUrl: "/resume.pdf",
   availableForWork: true,
+  availabilityText: "Open to full-time software engineering opportunities",
   yearsOfExperience: "3+",
 };
 
@@ -69,12 +71,12 @@ export const experienceData = [
 export const projectsData = [
   {
     id: 1,
-    title: "ViewTube",
+    title: "Agentic Content Intelligence Platform",
     description:
-      "A high-performance, full-stack video sharing platform built with modern web technologies. ViewTube offers a seamless user experience, a robust admin ecosystem, and a premium design language.",
-    tags: ["React", "Node.js", "PostgreSQL"],
-    githubUrl: "https://github.com/sachinkumarverma/Viewtube",
-    liveUrl: "https://viewtube-app.vercel.app/",
+      "An AI-driven content intelligence platform combining SEO automation, content analysis, scheduled agent workflows, orchestration, and human-governed execution.",
+    tags: ["Agentic AI", "TypeScript", "PostgreSQL"],
+    githubUrl: "https://github.com/sachinkumarverma/Aradhna-Marg",
+    liveUrl: "https://aradhnamarg.com/",
     previews: [
       "/projects/project1-preview1.png",
       "/projects/project1-preview2.png",
@@ -82,12 +84,12 @@ export const projectsData = [
   },
   {
     id: 2,
-    title: "ClipVora",
+    title: "SkillNora",
     description:
-      "A full-stack media downloader that lets you save videos, images, and audio from popular social media platforms.",
-    tags: ["React", "TypeScript", "Chrome Manifest V3"],
-    githubUrl: "https://github.com/sachinkumarverma/ClipVora",
-    liveUrl: "https://clipvora.vercel.app/",
+      "Full-stack LMS featuring AI-driven lecture insights, secure video delivery, and proctored testing. Includes multi-role dashboards, automated certificates, and seamless Razorpay checkout.",
+    tags: ["Node", "React", "TypeScript"],
+    githubUrl: "https://github.com/sachinkumarverma/SkillNora",
+    liveUrl: "https://skillnora.vercel.app/",
     previews: [
       "/projects/project2-preview1.png",
       "/projects/project2-preview2.png",
@@ -95,12 +97,12 @@ export const projectsData = [
   },
   {
     id: 3,
-    title: "Snake Game",
+    title: "ViewTube",
     description:
-      "A feature-rich, modern snake game built with React and Vite. Classic gameplay reimagined with levels, power-ups, combos, and a sleek dark UI.",
-    tags: ["React", "Vite"],
-    githubUrl: "https://github.com/sachinkumarverma/Snake_Game",
-    liveUrl: "https://snake-game-sachinverma.vercel.app/",
+      "A high-performance, full-stack video sharing platform built with modern web technologies. ViewTube offers a seamless user experience, a robust admin ecosystem, and a premium design language.",
+    tags: ["React", "Node.js", "PostgreSQL"],
+    githubUrl: "https://github.com/sachinkumarverma/Viewtube",
+    liveUrl: "https://viewtube-app.vercel.app/",
     previews: [
       "/projects/project3-preview1.png",
       "/projects/project3-preview2.png",
@@ -108,12 +110,12 @@ export const projectsData = [
   },
   {
     id: 4,
-    title: "Tribute Page",
+    title: "HospIQ",
     description:
-      "A tribute page dedicated to the Spiritual Orator Devkinandan Thakur Ji. This project showcases my ability to create visually appealing and well-structured web pages.",
-    tags: ["HTML", "CSS", "JavaScript"],
-    githubUrl: "https://github.com/sachinkumarverma/OIBSIP_TASKS/tree/main/Task_2_TributePage",
-    liveUrl: "https://tribute-page-sachin.vercel.app/",
+      "A healthcare operations platform designed for real-time clinical triage, SBAR workflows, and patient care paths. Features live socket event alerts, role-based administration, audit trails, and automated QI reporting.",
+    tags: ["React", "Node.js", "WebSockets"],
+    githubUrl: "https://gitlab.com/sachinv1410/hospiq",
+    liveUrl: "https://hospiq-admin.vercel.app/",
     previews: [
       "/projects/project4-preview1.png",
       "/projects/project4-preview2.png",
@@ -121,25 +123,29 @@ export const projectsData = [
   },
   {
     id: 5,
-    title: "Todo Web App",
+    title: "ClipVora",
     description:
-      "A modern, responsive To-Do web application built with React and Vite. This project demonstrates my ability to create functional, user-friendly interfaces with clean code and modern design principles.",
-    tags: ["React", "Vite"],
-    githubUrl: "https://github.com/sachinkumarverma/OIBSIP_TASKS/tree/main/Task_3_ToDo_WebApp",
-    liveUrl: "https://sachinverma.vercel.app/",
+      "A full-stack media downloader that lets you save videos, images, and audio from popular social media platforms.",
+    tags: ["React", "TypeScript", "Chrome Manifest V3"],
+    githubUrl: "https://github.com/sachinkumarverma/ClipVora",
+    liveUrl: "https://clipvora.vercel.app/",
     previews: [
       "/projects/project5-preview1.png",
+      "/projects/project5-preview2.png",
     ],
   },
   {
     id: 6,
-    title: "Data Science",
+    title: "CVPilot",
     description:
-      "Built multiple machine learning and deep learning projects including classification, decision trees, image processing, and neural networks using datasets like Iris and MNIST.",
-    tags: ["Python", "Machine Learning", "Deep Learning"],
-    githubUrl: "https://github.com/sachinkumarverma/LGMVIP-DataScience",
-    liveUrl: null,
-    previews: [],
+      "A modern AI-driven resume studio that analyzes job descriptions, generates tailored bullet points, and delivers ATS-compliant resumes with real-time feedback",
+    tags: ["Next.js", "Framer Motion", "Groq / LLaMA"],
+    githubUrl: "https://github.com/sachinkumarverma/CVPilot",
+    liveUrl: "https://cv-pilot-ai.vercel.app/",
+    previews: [
+      "/projects/project6-preview1.png",
+      "/projects/project6-preview2.png",
+    ],
   },
 ];
 

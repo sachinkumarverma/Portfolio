@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Code2, ExternalLink, Eye } from "lucide-react";
 import { GithubIcon } from "./icons";
@@ -8,17 +8,15 @@ export default function ProjectCard({ project, index }) {
   const [current, setCurrent] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
-  const next = useCallback(() => {
-    if (!hasPreviews) return;
-    setCurrent((c) => (c + 1) % project.previews.length);
-  }, [hasPreviews, project.previews?.length]);
-
-  // Auto-advance every 3.5s
   useEffect(() => {
     if (!hasPreviews || project.previews.length <= 1 || isPaused) return;
-    const timer = setInterval(next, 3500);
+
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % project.previews.length);
+    }, 3000);
+
     return () => clearInterval(timer);
-  }, [hasPreviews, project.previews?.length, isPaused, next]);
+  }, [hasPreviews, project.previews?.length, isPaused]);
 
   return (
     <motion.div
@@ -36,44 +34,49 @@ export default function ProjectCard({ project, index }) {
       <div style={{ position: "relative", width: "100%", height: 200, overflow: "hidden", flexShrink: 0 }}>
         {hasPreviews ? (
           <>
-            {/* Blurred background layer */}
-            <AnimatePresence mode="wait">
+            {/* Seamless Right-to-Left unidirectional slide */}
+            <AnimatePresence initial={false}>
               <motion.div
-                key={`bg-${current}`}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.6 }}
-                style={{
-                  position: "absolute",
-                  inset: -20,
-                  backgroundImage: `url(${project.previews[current]})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  filter: "blur(20px) brightness(0.4)",
-                  transform: "scale(1.15)",
-                }}
-              />
-            </AnimatePresence>
-
-            {/* Foreground preview image */}
-            <AnimatePresence mode="wait">
-              <motion.img
-                key={`img-${current}`}
-                src={project.previews[current]}
-                alt={`${project.title} preview ${current + 1}`}
-                initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -30 }}
-                transition={{ duration: 0.5 }}
+                key={current}
+                initial={{ x: "100%" }}
+                animate={{ x: "0%" }}
+                exit={{ x: "-100%" }}
+                transition={{ duration: 0.65, ease: [0.25, 1, 0.5, 1] }}
                 style={{
                   position: "absolute",
                   inset: 0,
                   width: "100%",
                   height: "100%",
-                  objectFit: "cover",
+                  overflow: "hidden",
                 }}
-              />
+              >
+                {/* Blurred background layer */}
+                <div
+                  style={{
+                    position: "absolute",
+                    inset: -20,
+                    backgroundImage: `url(${project.previews[current]})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    filter: "blur(20px) brightness(0.4)",
+                    transform: "scale(1.15)",
+                    pointerEvents: "none",
+                  }}
+                />
+
+                {/* Foreground preview image */}
+                <img
+                  src={project.previews[current]}
+                  alt={`${project.title} preview ${current + 1}`}
+                  style={{
+                    position: "relative",
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    display: "block",
+                  }}
+                />
+              </motion.div>
             </AnimatePresence>
 
             {/* Gradient overlay at bottom */}
@@ -87,13 +90,17 @@ export default function ProjectCard({ project, index }) {
               pointerEvents: "none",
             }} />
 
-            {/* Carousel dots */}
+            {/* Carousel dots - manual preview switching */}
             {project.previews.length > 1 && (
               <div style={{ position: "absolute", bottom: 10, left: "50%", transform: "translateX(-50%)", display: "flex", gap: 6, zIndex: 5 }}>
                 {project.previews.map((_, i) => (
                   <button
                     key={i}
-                    onClick={() => setCurrent(i)}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setCurrent(i);
+                    }}
+                    aria-label={`View preview ${i + 1}`}
                     style={{
                       width: i === current ? 20 : 8,
                       height: 8,

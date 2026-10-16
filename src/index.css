@@ -599,7 +599,7 @@ body {
 @media (min-width: 1024px) { .grid-about { grid-template-columns: 1fr 1fr; gap: 80px; } }
 
 /* ========================
-   HERO LAYOUT
+   HERO LAYOUT & ACTIONS
    ======================== */
 .hero-layout {
   display: flex;
@@ -609,12 +609,72 @@ body {
   text-align: center;
 }
 @media (min-width: 1024px) {
-  .hero-layout { flex-direction: row; text-align: left; gap: 80px; }
+  .hero-layout { flex-direction: row; text-align: left; gap: 64px; }
 }
 
 .hero-content { flex: 1; max-width: 640px; }
+@media (min-width: 1024px) {
+  .hero-content { max-width: 720px; }
+}
+
 .hero-visual { flex-shrink: 0; display: block; order: -1; }
 @media (min-width: 1024px) { .hero-visual { order: 0; } }
+
+/* Hero CTA Responsive 3-Button Group: 3 rows on mobile, 1 single row on desktop */
+.hero-cta-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.hero-cta-group .hero-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 14px 20px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .hero-cta-group {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    max-width: none;
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+    gap: 12px;
+  }
+
+  .hero-cta-group .hero-cta-btn {
+    width: auto;
+    white-space: nowrap;
+    padding: 12px 18px;
+    font-size: 0.9rem;
+    gap: 8px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-cta-group {
+    justify-content: flex-start;
+    gap: 14px;
+  }
+
+  .hero-cta-group .hero-cta-btn {
+    padding: 13px 20px;
+    font-size: 0.92rem;
+  }
+}
 
 /* ========================
    PROFILE PIC

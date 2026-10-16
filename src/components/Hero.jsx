@@ -67,21 +67,28 @@ export default function Hero() {
               <motion.div {...fadeUp(0.55)} className="availability flex-center-lg" style={{ marginBottom: 40 }}>
                 <div className="availability-dot" />
                 <span style={{ fontSize: "0.875rem", fontWeight: 500, color: "#34d399", letterSpacing: "0.03em" }}>
-                  Available for new projects
+                  {personalInfo.availabilityText || "Open to full-time software engineering opportunities"}
                 </span>
               </motion.div>
             )}
 
-            <motion.div {...fadeUp(0.65)} className="flex-center-lg" style={{ display: "flex", flexWrap: "wrap", gap: 16, marginBottom: 40 }}>
-              <a href="#projects" className="btn-primary"><Briefcase size={18} /> View My Work</a>
-              <a href="#contact" className="btn-outline"><Mail size={18} /> Get in Touch</a>
-              <a href={personalInfo.resumeUrl} target="_blank" rel="noopener noreferrer" className="btn-ghost"><Download size={18} /> Resume</a>
+            <motion.div {...fadeUp(0.65)} className="hero-cta-group">
+              <a href="#projects" className="btn-primary hero-cta-btn">
+                <Briefcase size={18} /> View selected work
+              </a>
+              <a href={personalInfo.resumeUrl} target="_blank" rel="noopener noreferrer" className="btn-outline hero-cta-btn">
+                <Download size={18} /> Download resume
+              </a>
+              <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="btn-ghost hero-cta-btn">
+                <LinkedinIcon size={18} /> Connect on LinkedIn
+              </a>
             </motion.div>
 
             <motion.div {...fadeUp(0.75)} className="flex-center-lg" style={{ display: "flex", gap: 12 }}>
               {[
                 { icon: GithubIcon, href: personalInfo.github, label: "GitHub" },
                 { icon: LinkedinIcon, href: personalInfo.linkedin, label: "LinkedIn" },
+                { icon: Mail, href: `mailto:${personalInfo.email}`, label: "Email" },
               ].map(({ icon: Icon, href, label }) => (
                 <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="social-link">
                   <Icon size={22} />

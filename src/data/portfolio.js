@@ -19,13 +19,13 @@ export const personalInfo = {
 export const aboutData = {
   heading: "Building Solutions That Scale",
   bio: [
-    "As a software engineer deeply passionate about modern web and mobile technologies, I specialize in building robust, scalable applications across React, Node.js, and native Android & iOS platforms.",
-    "My approach to engineering insists on rigorous test coverage — from unit testing React components with Vitest to validating backend APIs with Mocha and Supertest. Clean architecture and quality code aren't optional, they're the foundation.",
-    "I thrive in agile environments, bridging web and mobile ecosystems to deliver seamless cross-platform experiences that users love.",
+    "I’m a software developer focused on mobile development, building fast, stable iOS and Android applications with React Native. Over the past three years at Argusoft, I’ve progressed from an entry-level engineer to a Solution Analyst by working deeply on clean architecture, cross-platform performance, and reliable software.",
+    "React Native is my primary tool, and I enjoy solving the platform-specific challenges that arise across iOS and Android—from performance bottlenecks and lifecycle edge cases to native integrations and release stability.",
+    "Beyond mobile, I work across the web stack with React and Vue.js on the frontend and Node.js on the backend. This broader perspective helps me understand how mobile applications fit into the larger system. I’m motivated by difficult engineering problems, continuous learning, and building software that remains dependable as it grows.",
   ],
   highlights: [
+    { icon: "Briefcase", text: "3+ Years Professional Experience" },
     { icon: "MapPin", text: "Based in Gandhinagar, Gujarat" },
-    { icon: "Award", text: "Open Source Contributor" },
   ],
 };
 
@@ -42,7 +42,7 @@ export const experienceData = [
     responsibilities: [
       "Built and maintained full-stack web applications using React and Node.js, serving enterprise-grade features to production users.",
       "Developed and shipped native Android (Kotlin) and iOS (Swift) modules, integrating them with existing web services for a unified cross-platform experience.",
-      "Architected comprehensive test suites — unit tests for React components (Vitest/React Testing Library) and backend API validation (Mocha/Supertest), achieving 85%+ code coverage.",
+      "Implemented comprehensive test suites — unit tests for React components (Vitest/React Testing Library) and backend API validation (Mocha/Supertest) to ensure software reliability and prevent regressions.",
       "Designed RESTful APIs and integrated third-party services including payment gateways and push notification systems.",
       "Collaborated with cross-functional teams in agile sprints, conducting code reviews and driving CI/CD pipeline improvements.",
     ],

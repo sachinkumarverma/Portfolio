@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { MapPin, Award } from "lucide-react";
+import { MapPin, Award, Briefcase, Code2, CheckCircle2 } from "lucide-react";
 import { aboutData } from "../data/portfolio";
 import SectionHeader from "./SectionHeader";
 
-const iconMap = { MapPin, Award };
+const iconMap = { MapPin, Award, Briefcase, Code2, CheckCircle2 };
 
 export default function About() {
   return (
@@ -24,7 +24,14 @@ export default function About() {
 
             <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
               {aboutData.highlights.map((h, i) => {
-                const Icon = iconMap[h.icon];
+                const Icon = iconMap[h.icon] || Briefcase;
+                const content = (
+                  <>
+                    <div className="icon-box icon-box-sm"><Icon size={20} /></div>
+                    <span style={{ fontSize: "1.05rem", fontWeight: 500, color: "var(--text-light)" }}>{h.text}</span>
+                  </>
+                );
+
                 return (
                   <motion.div
                     key={i}
@@ -32,11 +39,25 @@ export default function About() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.3 + i * 0.15 }}
-                    className="card-highlight"
-                    style={{ display: "flex", alignItems: "center", gap: 20 }}
                   >
-                    <div className="icon-box icon-box-sm"><Icon size={20} /></div>
-                    <span style={{ fontSize: "1.05rem", fontWeight: 500, color: "var(--text-light)" }}>{h.text}</span>
+                    {h.link ? (
+                      <a
+                        href={h.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="card-highlight"
+                        style={{ display: "flex", alignItems: "center", gap: 20, textDecoration: "none" }}
+                      >
+                        {content}
+                      </a>
+                    ) : (
+                      <div
+                        className="card-highlight"
+                        style={{ display: "flex", alignItems: "center", gap: 20 }}
+                      >
+                        {content}
+                      </div>
+                    )}
                   </motion.div>
                 );
               })}

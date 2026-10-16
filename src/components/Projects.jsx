@@ -6,7 +6,7 @@ export default function Projects() {
   return (
     <section id="projects" className="section-spacing">
       <div className="container-wide">
-        <SectionHeader number="03" label="OPEN SOURCE & REPOS" title="Featured GitHub Projects" />
+        <SectionHeader number="03" label="SELECTED PROJECTS" title="Selected Projects" />
 
         <div className="grid-projects">
           {projectsData.map((project, i) => (

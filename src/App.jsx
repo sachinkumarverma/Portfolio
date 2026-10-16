@@ -11,6 +11,13 @@ import Footer from "./components/Footer";
 
 export default function App() {
   useEffect(() => {
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    if (!window.location.hash) {
+      window.scrollTo(0, 0);
+    }
+
     // Redirect any invalid URL or 404 path back to the default '/' page
     const handleInvalidRoute = () => {
       if (window.location.pathname !== "/" && window.location.pathname !== "") {

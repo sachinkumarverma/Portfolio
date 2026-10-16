@@ -130,6 +130,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
+  overflow-anchor: none;
   font-size: 16px;
 }
 
@@ -140,6 +141,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  overflow-anchor: none;
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
@@ -787,3 +789,264 @@ body {
 .flex-center { display: flex; align-items: center; justify-content: center; }
 .flex-center-lg { display: flex; justify-content: center; }
 @media (min-width: 1024px) { .flex-center-lg { justify-content: flex-start; } }
+
+/* ========================
+   PROJECT CARDS & CASE STUDY
+   ======================== */
+.project-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--bg-tag);
+  border: 1px solid var(--border-icon);
+  border-radius: 9999px;
+  width: fit-content;
+}
+
+.project-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: stretch;
+  border-top: 1px solid var(--border-card);
+  padding-top: 16px;
+  margin-top: auto;
+}
+
+.project-link-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 8px 6px;
+  border-radius: 10px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-skill);
+  border: 1px solid var(--bg-skill-border);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  flex: 1 1 0;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.project-link-btn:hover {
+  color: var(--accent);
+  border-color: var(--border-card-hover);
+  background: var(--bg-nav-hover);
+  transform: translateY(-1px);
+}
+
+.project-link-btn.btn-case-study {
+  color: var(--text-primary);
+  border-color: var(--border-icon);
+  background: var(--bg-icon);
+}
+
+.project-link-btn.btn-case-study:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--bg-tag);
+}
+
+.project-link-btn.project-link-primary {
+  color: #ffffff;
+  background: linear-gradient(135deg, #06b6d4, #3b82f6);
+  border-color: transparent;
+  box-shadow: 0 2px 10px rgba(6, 182, 212, 0.25);
+}
+
+.project-link-btn.project-link-primary:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(6, 182, 212, 0.4);
+}
+
+@media (max-width: 640px) {
+  .project-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .project-link-btn {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 0.85rem;
+  }
+}
+
+/* ========================
+   CASE STUDY MODAL
+   ======================== */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.modal-dialog {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  max-height: 88vh;
+  background: var(--bg-body);
+  border: 1px solid var(--border-card-hover);
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), 0 0 40px var(--accent-glow);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: var(--text-body);
+}
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 24px 28px 18px;
+  border-bottom: 1px solid var(--border-card);
+  flex-shrink: 0;
+}
+
+.modal-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.modal-close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid var(--border-card);
+  background: var(--bg-ghost);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.modal-close-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--border-card-hover);
+  background: var(--bg-nav-hover);
+}
+
+.modal-close-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.modal-body {
+  padding: 24px 28px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.case-study-intro {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  padding-bottom: 4px;
+}
+
+.case-study-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 18px;
+  background: var(--bg-card-highlight);
+  border: 1px solid var(--border-card);
+  border-radius: 14px;
+}
+
+.case-study-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+}
+
+.case-study-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-body);
+  white-space: pre-line;
+}
+
+.modal-footer {
+  display: flex;
+  gap: 12px;
+  padding: 18px 28px 24px;
+  border-top: 1px solid var(--border-card);
+  flex-shrink: 0;
+  background: var(--bg-card);
+}
+
+.modal-footer .project-link-btn {
+  flex: 1;
+  padding: 12px 18px;
+  font-size: 0.88rem;
+  border-radius: 12px;
+}
+
+@media (max-width: 640px) {
+  .modal-backdrop {
+    padding: 12px;
+  }
+  .modal-dialog {
+    max-height: 92vh;
+    border-radius: 16px;
+  }
+  .modal-header {
+    padding: 18px 20px 14px;
+  }
+  .modal-title {
+    font-size: 1.15rem;
+  }
+  .modal-body {
+    padding: 18px 20px;
+    gap: 14px;
+  }
+  .modal-footer {
+    padding: 14px 20px 18px;
+    flex-direction: column;
+  }
+}
+
+/* ========================
+   REDUCED MOTION
+   ======================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+

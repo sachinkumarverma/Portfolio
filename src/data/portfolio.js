@@ -71,10 +71,20 @@ export const experienceData = [
 export const projectsData = [
   {
     id: 1,
-    title: "Agentic Content Intelligence Platform",
+    title: "Aradhna Marg — Hindi & English Devotional Website",
+    projectType: "Independent Project",
     description:
-      "An AI-driven content intelligence platform combining SEO automation, content analysis, scheduled agent workflows, orchestration, and human-governed execution.",
-    tags: ["Agentic AI", "TypeScript", "PostgreSQL"],
+      "An independently built devotional website for exploring bhajans, spiritual articles, festivals, deities, and other religious content in Hindi and English.",
+    purpose:
+      "Make devotional content easier to browse and discover in Hindi and English.",
+    whatIBuilt:
+      "Built the public content experience, category and discovery flows, responsive UI, SEO metadata, and deployment for the live website.",
+    technicalChallenge:
+      "Organizing multilingual devotional content into clear, discoverable, and easy-to-navigate pages.",
+    outcome:
+      "A live devotional website available at https://aradhnamarg.com/",
+    credentials: null,
+    tags: ["React", "TypeScript", "Tailwind CSS", "Supabase"],
     githubUrl: "https://github.com/sachinkumarverma/Aradhna-Marg",
     liveUrl: "https://aradhnamarg.com/",
     previews: [
@@ -85,9 +95,19 @@ export const projectsData = [
   {
     id: 2,
     title: "SkillNora",
+    projectType: "Independent Project",
     description:
-      "Full-stack LMS featuring AI-driven lecture insights, secure video delivery, and proctored testing. Includes multi-role dashboards, automated certificates, and seamless Razorpay checkout.",
-    tags: ["Node", "React", "TypeScript"],
+      "A full-stack learning platform featuring structured courses, interactive lecture players, role-based dashboards, and payment gateway integration.",
+    purpose:
+      "Build a modern web application for publishing educational courses and tracking individual student learning progress.",
+    whatIBuilt:
+      "Developed the Next.js frontend, course browsing and lecture player interfaces, role-based dashboards (student, instructor, admin), Express backend API, and Razorpay checkout workflow.",
+    technicalChallenge:
+      "Designing role-based access control and state synchronization between the Next.js frontend and Express/Supabase backend.",
+    outcome:
+      "A deployed full-stack web application with open-source repositories.",
+    credentials: null,
+    tags: ["Next.js", "TypeScript", "Node.js", "Express", "Supabase"],
     githubUrl: "https://github.com/sachinkumarverma/SkillNora",
     liveUrl: "https://skillnora.vercel.app/",
     previews: [
@@ -98,9 +118,19 @@ export const projectsData = [
   {
     id: 3,
     title: "ViewTube",
+    projectType: "Independent Project",
     description:
-      "A high-performance, full-stack video sharing platform built with modern web technologies. ViewTube offers a seamless user experience, a robust admin ecosystem, and a premium design language.",
-    tags: ["React", "Node.js", "PostgreSQL"],
+      "A full-stack video sharing web application featuring video streaming, custom playback controls, user channels, search, and a dedicated admin management portal.",
+    purpose:
+      "Create a full-featured video exploration and streaming web platform from scratch with authentication and management tools.",
+    whatIBuilt:
+      "Built the React user interface, custom video player with keyboard controls, Express REST APIs, authentication flows, and administrative moderation dashboard.",
+    technicalChallenge:
+      "Managing fluid video layout state, responsive playback controls, and synchronized interaction data across user and admin interfaces.",
+    outcome:
+      "A functional full-stack project deployed on Vercel with public source code on GitHub.",
+    credentials: null,
+    tags: ["React", "Node.js", "Express", "PostgreSQL", "Tailwind CSS"],
     githubUrl: "https://github.com/sachinkumarverma/Viewtube",
     liveUrl: "https://viewtube-app.vercel.app/",
     previews: [
@@ -111,9 +141,19 @@ export const projectsData = [
   {
     id: 4,
     title: "HospIQ",
+    projectType: "Independent Project",
     description:
-      "A healthcare operations platform designed for real-time clinical triage, SBAR workflows, and patient care paths. Features live socket event alerts, role-based administration, audit trails, and automated QI reporting.",
-    tags: ["React", "Node.js", "WebSockets"],
+      "A healthcare operations web prototype designed for clinical triage workflows, patient tracking, and administrative reporting.",
+    purpose:
+      "Create an independent operational prototype to explore patient triage tracking, real-time alert updates, and administrative workflow interfaces.",
+    whatIBuilt:
+      "Developed the React admin portal, patient record views, SBAR workflow interface components, and integrated socket event notifications for status updates.",
+    technicalChallenge:
+      "Designing an intuitive multi-column dashboard that organizes patient statuses, clinical priority tiers, and updates without visual clutter.",
+    outcome:
+      "A prototype web application deployed on Vercel with repository on GitLab.",
+    credentials: null,
+    tags: ["React", "Node.js", "TypeScript", "WebSockets"],
     githubUrl: "https://gitlab.com/sachinv1410/hospiq",
     liveUrl: "https://hospiq-admin.vercel.app/",
     previews: [
@@ -124,9 +164,19 @@ export const projectsData = [
   {
     id: 5,
     title: "ClipVora",
+    projectType: "Independent Project",
     description:
-      "A full-stack media downloader that lets you save videos, images, and audio from popular social media platforms.",
-    tags: ["React", "TypeScript", "Chrome Manifest V3"],
+      "A full-stack media downloader utility and Chrome extension for saving videos, images, and audio from public social media platforms.",
+    purpose:
+      "Provide an accessible web tool and browser extension for extracting and downloading public media in multiple formats.",
+    whatIBuilt:
+      "Built the React web client, Chrome Extension (Manifest V3), Express backend service, format selectors, and real-time download status indicators.",
+    technicalChallenge:
+      "Handling varying platform media payloads, format extraction, and multi-format conversion pipelines reliably.",
+    outcome:
+      "A live personal utility deployed on Vercel with open-source code on GitHub.",
+    credentials: null,
+    tags: ["React", "TypeScript", "Node.js", "Chrome Extension"],
     githubUrl: "https://github.com/sachinkumarverma/ClipVora",
     liveUrl: "https://clipvora.vercel.app/",
     previews: [
@@ -137,9 +187,19 @@ export const projectsData = [
   {
     id: 6,
     title: "CVPilot",
+    projectType: "Independent Project",
     description:
-      "A modern AI-driven resume studio that analyzes job descriptions, generates tailored bullet points, and delivers ATS-compliant resumes with real-time feedback",
-    tags: ["Next.js", "Framer Motion", "Groq / LLaMA"],
+      "A modern resume studio featuring live interactive editing, customizable templates, real-time preview, and PDF export.",
+    purpose:
+      "Build a streamlined, browser-based resume builder with instant visual feedback and clean PDF generation.",
+    whatIBuilt:
+      "Developed the Next.js application, dual-column builder and preview interfaces, template switcher, drag-and-drop section ordering, and print-optimized PDF styling.",
+    technicalChallenge:
+      "Balancing live interactive editing state with pixel-perfect single-page A4/Letter print CSS constraints.",
+    outcome:
+      "A live web application deployed on Vercel with open-source repository on GitHub.",
+    credentials: null,
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Supabase"],
     githubUrl: "https://github.com/sachinkumarverma/CVPilot",
     liveUrl: "https://cv-pilot-ai.vercel.app/",
     previews: [

@@ -218,36 +218,39 @@ export default function ProjectCard({ project, index }) {
 
           {/* 6, 7, 8. Action buttons row */}
           <div className="project-actions">
-            {/* 6. Deep Dive button */}
+            {/* 6. Details button */}
             <button
               ref={triggerRef}
               type="button"
               onClick={() => setIsModalOpen(true)}
               className="project-link-btn btn-case-study"
               aria-haspopup="dialog"
+              aria-label={`View case study details for ${project.title}`}
             >
-              <BookOpen size={14} /> Deep Dive
+              <BookOpen size={14} /> <span>Details</span>
             </button>
 
-            {/* 7. Source Code button */}
+            {/* 7. Code button */}
             <a
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="project-link-btn"
+              aria-label={`Open source code for ${project.title}`}
             >
-              <GithubIcon size={14} /> Source Code
+              <GithubIcon size={14} /> <span>Code</span>
             </a>
 
-            {/* 8. Visit Site button, only when a live URL exists */}
+            {/* 8. Live button, only when a live URL exists */}
             {project.liveUrl && (
               <a
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="project-link-btn project-link-primary"
+                aria-label={`Open live site for ${project.title}`}
               >
-                <ExternalLink size={14} /> Visit Site
+                <ExternalLink size={14} /> <span>Live</span>
               </a>
             )}
           </div>

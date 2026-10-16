@@ -34,12 +34,14 @@ export default function App() {
     <ThemeProvider>
       <div style={{ minHeight: "100vh", backgroundColor: "var(--bg-body)", transition: "background-color 0.4s ease" }}>
         <Navbar />
-        <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <Skills />
-        <Contact />
+        <main id="main-content">
+          <Hero />
+          <About />
+          <Experience />
+          <Projects />
+          <Skills />
+          <Contact />
+        </main>
         <Footer />
       </div>
     </ThemeProvider>

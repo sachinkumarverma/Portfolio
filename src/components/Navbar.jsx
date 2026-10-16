@@ -50,7 +50,11 @@ export default function Navbar() {
           </div>
 
           {/* Theme toggle */}
-          <button onClick={toggle} className="theme-toggle" aria-label="Toggle theme">
+          <button
+            onClick={toggle}
+            className="theme-toggle"
+            aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+          >
             <motion.div
               key={theme}
               initial={{ rotate: -90, opacity: 0 }}
@@ -64,6 +68,9 @@ export default function Navbar() {
           <button
             onClick={() => setIsMobileOpen(!isMobileOpen)}
             className="nav-mobile-btn"
+            aria-label={isMobileOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isMobileOpen}
+            aria-controls="mobile-menu"
           >
             {isMobileOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
@@ -73,6 +80,7 @@ export default function Navbar() {
       <AnimatePresence>
         {isMobileOpen && (
           <motion.div
+            id="mobile-menu"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}

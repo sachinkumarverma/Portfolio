@@ -34,7 +34,7 @@ export const experienceData = [
     id: 1,
     role: "Full Stack Developer",
     company: "Argusoft",
-    companyUrl: "#",
+    companyUrl: "https://www.argusoft.com/",
     location: "Gandhinagar, Gujarat",
     period: "Jan 2024 - Present",
     type: "current",
@@ -51,7 +51,7 @@ export const experienceData = [
     id: 2,
     role: "Software Developer Intern",
     company: "Argusoft",
-    companyUrl: "#",
+    companyUrl: "https://www.argusoft.com/",
     location: "Gandhinagar, Gujarat",
     period: "July 2023 - Dec 2023",
     type: "past",
@@ -71,10 +71,10 @@ export const experienceData = [
 export const projectsData = [
   {
     id: 1,
-    title: "Aradhna Marg — Hindi & English Devotional Website",
+    title: "Aradhna Marg — Devotional Website",
     projectType: "Independent Project",
     description:
-      "An independently built devotional website for exploring bhajans, spiritual articles, festivals, deities, and other religious content in Hindi and English.",
+      "An independently built Hindi and English devotional website for exploring bhajans, spiritual articles, festivals, deities, and other religious content.",
     purpose:
       "Make devotional content easier to browse and discover in Hindi and English.",
     whatIBuilt:

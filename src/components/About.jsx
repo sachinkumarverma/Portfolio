@@ -18,9 +18,9 @@ export default function About() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
           >
-            <h3 style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: 48, lineHeight: 1.15, letterSpacing: "-0.02em" }}>
+            <h2 style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: 48, lineHeight: 1.15, letterSpacing: "-0.02em" }}>
               {aboutData.heading}
-            </h3>
+            </h2>
 
             <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
               {aboutData.highlights.map((h, i) => {

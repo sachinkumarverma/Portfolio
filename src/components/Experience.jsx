@@ -52,7 +52,20 @@ export default function Experience() {
                     <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: 24, gap: 16 }}>
                       <div>
                         <h3 style={{ fontSize: "1.35rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: 4 }}>{exp.role}</h3>
-                        <a href={exp.companyUrl} style={{ color: "var(--accent)", fontWeight: 600, fontSize: "1.05rem", textDecoration: "none" }}>{exp.company}</a>
+                        {exp.companyUrl && exp.companyUrl !== "#" ? (
+                          <a
+                            href={exp.companyUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ color: "var(--accent)", fontWeight: 600, fontSize: "1.05rem", textDecoration: "none" }}
+                          >
+                            {exp.company}
+                          </a>
+                        ) : (
+                          <span style={{ color: "var(--accent)", fontWeight: 600, fontSize: "1.05rem" }}>
+                            {exp.company}
+                          </span>
+                        )}
                       </div>
                       {exp.badge && (
                         <span style={{ display: "flex", alignItems: "center", gap: 8, padding: "6px 14px", background: "rgba(251,191,36,0.08)", color: "#fbbf24", border: "1px solid rgba(251,191,36,0.2)", borderRadius: 999, fontSize: "0.75rem", fontWeight: 700, whiteSpace: "nowrap" }}>

@@ -4,13 +4,14 @@ import { GithubIcon, LinkedinIcon } from "./icons";
 import { personalInfo } from "../data/portfolio";
 import profileImg from "../assets/sachin.png";
 
-const fadeUp = (delay = 0) => ({
-  initial: { opacity: 0, y: 40 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.8, delay, ease: [0.25, 0.4, 0.25, 1] },
+const fadeChild = (delay = 0) => ({
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  transition: { duration: 0.65, delay, ease: [0.25, 0.4, 0.25, 1] },
 });
 
 export default function Hero() {
+
   return (
     <section style={{ position: "relative", minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
       {/* Background */}
@@ -44,27 +45,46 @@ export default function Hero() {
       {/* Content */}
       <div className="container-wide" style={{ position: "relative", zIndex: 10, paddingTop: 120, paddingBottom: 120 }}>
         <div className="hero-layout">
-          <div className="hero-content">
-            <motion.div {...fadeUp(0.1)}>
-              <span style={{ display: "inline-block", padding: "8px 20px", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.25em", color: "var(--accent)", background: "var(--bg-tag)", border: "1px solid var(--border-icon)", borderRadius: 999, marginBottom: 32, textTransform: "uppercase" }}>
+          <motion.div
+            className="hero-content"
+            initial={{ opacity: 0, y: 32 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.95, delay: 0.05, ease: [0.25, 0.4, 0.25, 1] }}
+          >
+            <motion.div {...fadeChild(0.15)}>
+              <span style={{ display: "inline-block", padding: "8px 20px", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.25em", color: "var(--accent)", background: "var(--bg-tag)", border: "1px solid var(--border-icon)", borderRadius: 999, marginBottom: 24, textTransform: "uppercase" }}>
                 {personalInfo.title}
               </span>
             </motion.div>
 
-            <motion.h1 {...fadeUp(0.2)} className="gradient-text" style={{ fontSize: "clamp(2rem, 4.5vw, 3.2rem)", fontWeight: 800, lineHeight: 0.95, marginBottom: 24, letterSpacing: "-0.03em" }}>
+            <motion.h1
+              {...fadeChild(0.28)}
+              className="gradient-text"
+              style={{ fontSize: "clamp(2rem, 4.5vw, 3.2rem)", fontWeight: 800, lineHeight: 1.15, marginBottom: 18, letterSpacing: "-0.03em" }}
+            >
               {personalInfo.name}
             </motion.h1>
 
-            <motion.p {...fadeUp(0.35)} style={{ fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)", fontWeight: 500, color: "var(--accent)", opacity: 0.7, marginBottom: 20 }}>
+            <motion.p
+              {...fadeChild(0.40)}
+              style={{ fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)", fontWeight: 500, color: "var(--accent)", opacity: 0.85, marginBottom: 18, lineHeight: 1.45 }}
+            >
               {personalInfo.subtitle}
             </motion.p>
 
-            <motion.p {...fadeUp(0.45)} style={{ fontSize: "clamp(1rem, 2vw, 1.2rem)", lineHeight: 1.75, marginBottom: 40, maxWidth: 560, color: "var(--text-secondary)" }}>
+            <motion.p
+              {...fadeChild(0.52)}
+              style={{ fontSize: "clamp(1rem, 2vw, 1.2rem)", lineHeight: 1.75, marginBottom: 32, maxWidth: 560, color: "var(--text-secondary)" }}
+            >
               {personalInfo.description}
             </motion.p>
 
             {personalInfo.availableForWork && (
-              <motion.div {...fadeUp(0.55)} className="availability flex-center-lg" style={{ marginBottom: 40 }}>
+              <motion.div
+                {...fadeChild(0.64)}
+                className="availability flex-center-lg"
+                style={{ marginBottom: 32 }}
+              >
                 <div className="availability-dot" />
                 <span style={{ fontSize: "0.875rem", fontWeight: 500, color: "#34d399", letterSpacing: "0.03em" }}>
                   {personalInfo.availabilityText || "Open to full-time software engineering opportunities"}
@@ -72,7 +92,10 @@ export default function Hero() {
               </motion.div>
             )}
 
-            <motion.div {...fadeUp(0.65)} className="hero-cta-group">
+            <motion.div
+              {...fadeChild(0.76)}
+              className="hero-cta-group"
+            >
               <a href="#projects" className="btn-primary hero-cta-btn">
                 <Briefcase size={18} /> View selected work
               </a>
@@ -84,7 +107,11 @@ export default function Hero() {
               </a>
             </motion.div>
 
-            <motion.div {...fadeUp(0.75)} className="flex-center-lg" style={{ display: "flex", gap: 12 }}>
+            <motion.div
+              {...fadeChild(0.88)}
+              className="flex-center-lg"
+              style={{ display: "flex", gap: 12 }}
+            >
               {[
                 { icon: GithubIcon, href: personalInfo.github, label: "GitHub" },
                 { icon: LinkedinIcon, href: personalInfo.linkedin, label: "LinkedIn" },
@@ -95,13 +122,13 @@ export default function Hero() {
                 </a>
               ))}
             </motion.div>
-          </div>
+          </motion.div>
 
           {/* Right - Profile pic inside rotating rings */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.2, delay: 0.5, ease: [0.25, 0.4, 0.25, 1] }}
+            initial={{ opacity: 0, scale: 0.72, y: 24 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 1.15, delay: 0.35, ease: [0.25, 0.4, 0.25, 1] }}
             className="hero-visual"
             style={{ position: "relative" }}
           >
@@ -140,19 +167,25 @@ export default function Hero() {
 
             {/* Floating badge */}
             <motion.div
-              animate={{ y: [0, -15, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, delay: 0.75, ease: [0.25, 0.4, 0.25, 1] }}
               style={{ position: "absolute", top: -24, right: -24, background: "var(--bg-card)", backdropFilter: "blur(20px)", border: "1px solid var(--border-card)", borderRadius: 16, padding: "16px 20px", boxShadow: "0 20px 60px rgba(0,0,0,0.2)" }}
             >
-              <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                <div style={{ width: 40, height: 40, borderRadius: 12, background: "linear-gradient(135deg, #06b6d4, #3b82f6)", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 4px 15px rgba(6,182,212,0.3)" }}>
-                  <Briefcase size={18} color="white" />
+              <motion.div
+                animate={{ y: [0, -15, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                  <div style={{ width: 40, height: 40, borderRadius: 12, background: "linear-gradient(135deg, #06b6d4, #3b82f6)", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 4px 15px rgba(6,182,212,0.3)" }}>
+                    <Briefcase size={18} color="white" />
+                  </div>
+                  <div>
+                    <div style={{ fontSize: "1rem", fontWeight: 700, color: "var(--text-primary)" }}>{personalInfo.yearsOfExperience} Years</div>
+                    <div style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.15em", color: "var(--text-muted)", textTransform: "uppercase" }}>Experience</div>
+                  </div>
                 </div>
-                <div>
-                  <div style={{ fontSize: "1rem", fontWeight: 700, color: "var(--text-primary)" }}>{personalInfo.yearsOfExperience} Years</div>
-                  <div style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.15em", color: "var(--text-muted)", textTransform: "uppercase" }}>Experience</div>
-                </div>
-              </div>
+              </motion.div>
             </motion.div>
           </motion.div>
         </div>
@@ -163,7 +196,7 @@ export default function Hero() {
         href="#about"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
+        transition={{ duration: 0.8, delay: 1.3, ease: [0.25, 0.4, 0.25, 1] }}
         style={{ position: "absolute", bottom: 40, left: "50%", transform: "translateX(-50%)", color: "var(--text-muted)", textDecoration: "none" }}
       >
         <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}>

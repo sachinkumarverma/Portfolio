@@ -631,7 +631,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   gap: 12px;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
 .hero-cta-group .hero-cta-btn {
@@ -825,8 +825,10 @@ body {
   gap: 5px;
   padding: 8px 6px;
   border-radius: 10px;
+  font-family: inherit;
   font-size: 0.74rem;
   font-weight: 600;
+  line-height: 1;
   color: var(--text-secondary);
   background: var(--bg-skill);
   border: 1px solid var(--bg-skill-border);
@@ -836,6 +838,17 @@ body {
   flex: 1 1 0;
   min-width: 0;
   white-space: nowrap;
+}
+
+.project-link-btn span {
+  display: inline-block;
+  line-height: 1;
+  transform: translateY(0.35px);
+}
+
+.project-link-btn svg {
+  display: block;
+  flex-shrink: 0;
 }
 
 .project-link-btn:hover {
@@ -877,7 +890,7 @@ body {
   }
   .project-link-btn {
     width: 100%;
-    padding: 10px 14px;
+    padding: 11px 14px 9px;
     font-size: 0.85rem;
   }
 }
@@ -1039,14 +1052,22 @@ body {
   }
 }
 
+
+
 /* ========================
-   REDUCED MOTION
+   ACCESSIBILITY & FOCUS VISIBLE
    ======================== */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
+a:focus-visible,
+button:focus-visible,
+.project-link-btn:focus-visible,
+.btn-primary:focus-visible,
+.btn-outline:focus-visible,
+.btn-ghost:focus-visible,
+.social-link:focus-visible,
+.theme-toggle:focus-visible,
+.nav-link:focus-visible,
+.nav-logo:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 

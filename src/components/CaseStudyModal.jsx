@@ -176,7 +176,7 @@ export default function CaseStudyModal({ isOpen, onClose, project, triggerRef })
                 rel="noopener noreferrer"
                 className="project-link-btn"
               >
-                <GithubIcon size={16} /> Source Code
+                <GithubIcon size={16} /> <span>Source Code</span>
               </a>
               {project.liveUrl && (
                 <a
@@ -185,7 +185,7 @@ export default function CaseStudyModal({ isOpen, onClose, project, triggerRef })
                   rel="noopener noreferrer"
                   className="project-link-btn project-link-primary"
                 >
-                  <ExternalLink size={15} /> Visit Site
+                  <ExternalLink size={15} /> <span>Visit Site</span>
                 </a>
               )}
             </div>

@@ -1,28 +1,33 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/profile.png" />
-    <link rel="apple-touch-icon" href="/profile.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="canonical" href="https://sachinkumarverma.vercel.app/" />
-    <title>Sachin Kumar Verma | Full Stack Developer</title>
-    <meta name="description" content="Portfolio of Sachin Kumar Verma — Full Stack Developer specializing in React, Node.js, and cross-platform mobile development." />
-    <meta property="og:title" content="Sachin Kumar Verma | Full Stack Developer" />
-    <meta property="og:description" content="Specializing in React, Node.js, and cross-platform mobile development. I build performant, test-driven applications." />
-    <meta property="og:url" content="https://sachinkumarverma.vercel.app/" />
-    <meta property="og:image" content="https://sachinkumarverma.vercel.app/profile.png" />
-    <meta property="og:image:alt" content="Sachin Kumar Verma — Full Stack Developer" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Sachin Kumar Verma | Full Stack Developer" />
-    <meta name="twitter:description" content="Specializing in React, Node.js, and cross-platform mobile development." />
-    <meta name="twitter:image" content="https://sachinkumarverma.vercel.app/profile.png" />
-    <meta name="twitter:image:alt" content="Sachin Kumar Verma — Full Stack Developer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <script type="application/ld+json">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/profile.png" />
+  <link rel="apple-touch-icon" href="/profile.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://sachinkumarverma.vercel.app/" />
+  <title>Sachin Kumar Verma | Solution Analyst</title>
+  <meta name="description"
+    content="Portfolio of Sachin Kumar Verma — Solution Analyst specializing in React, Node.js, and cross-platform mobile development." />
+  <meta property="og:title" content="Sachin Kumar Verma | Solution Analyst" />
+  <meta property="og:description"
+    content="Specializing in React, Node.js, and cross-platform mobile development. I build performant, test-driven applications." />
+  <meta property="og:url" content="https://sachinkumarverma.vercel.app/" />
+  <meta property="og:image" content="https://sachinkumarverma.vercel.app/profile.png" />
+  <meta property="og:image:alt" content="Sachin Kumar Verma — Solution Analyst" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Sachin Kumar Verma | Solution Analyst" />
+  <meta name="twitter:description" content="Specializing in React, Node.js, and cross-platform mobile development." />
+  <meta name="twitter:image" content="https://sachinkumarverma.vercel.app/profile.png" />
+  <meta name="twitter:image:alt" content="Sachin Kumar Verma — Solution Analyst" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
@@ -30,7 +35,7 @@
           "@type": "Person",
           "@id": "https://sachinkumarverma.vercel.app/#person",
           "name": "Sachin Kumar Verma",
-          "jobTitle": "Full Stack Developer",
+          "jobTitle": "Solution Analyst",
           "url": "https://sachinkumarverma.vercel.app/",
           "image": "https://sachinkumarverma.vercel.app/profile.png",
           "sameAs": [
@@ -42,8 +47,8 @@
           "@type": "WebSite",
           "@id": "https://sachinkumarverma.vercel.app/#website",
           "url": "https://sachinkumarverma.vercel.app/",
-          "name": "Sachin Kumar Verma | Full Stack Developer",
-          "description": "Portfolio of Sachin Kumar Verma — Full Stack Developer specializing in React, Node.js, and cross-platform mobile development.",
+          "name": "Sachin Kumar Verma | Solution Analyst",
+          "description": "Portfolio of Sachin Kumar Verma — Solution Analyst specializing in React, Node.js, and cross-platform mobile development.",
           "publisher": {
             "@id": "https://sachinkumarverma.vercel.app/#person"
           }
@@ -51,30 +56,32 @@
       ]
     }
     </script>
-    <script>
-      (function () {
-        if ('scrollRestoration' in history) {
-          history.scrollRestoration = 'manual';
+  <script>
+    (function () {
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+      if (!window.location.hash) {
+        window.scrollTo(0, 0);
+      }
+      if (window.location.pathname !== "/" && window.location.pathname !== "") {
+        window.history.replaceState(null, "", "/");
+      }
+      try {
+        var saved = localStorage.getItem("portfolio-theme");
+        if (saved !== "light" && saved !== "dark") {
+          saved = "dark";
+          localStorage.setItem("portfolio-theme", "dark");
         }
-        if (!window.location.hash) {
-          window.scrollTo(0, 0);
-        }
-        if (window.location.pathname !== "/" && window.location.pathname !== "") {
-          window.history.replaceState(null, "", "/");
-        }
-        try {
-          var saved = localStorage.getItem("portfolio-theme");
-          if (saved !== "light" && saved !== "dark") {
-            saved = "dark";
-            localStorage.setItem("portfolio-theme", "dark");
-          }
-          document.documentElement.setAttribute("data-theme", saved);
-        } catch (e) {}
-      })();
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+        document.documentElement.setAttribute("data-theme", saved);
+      } catch (e) { }
+    })();
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>

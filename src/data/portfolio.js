@@ -1,7 +1,7 @@
 export const personalInfo = {
   name: "Sachin Kumar Verma",
   initials: "SV",
-  title: "FULL STACK DEVELOPER",
+  title: "Solution Analyst",
   subtitle:
     "Full-Stack Engineer at Argusoft building reliable web and mobile products with React, Node.js, and React Native.",
   description:
@@ -32,7 +32,7 @@ export const aboutData = {
 export const experienceData = [
   {
     id: 1,
-    role: "Full Stack Developer",
+    role: "Solution Analyst",
     company: "Argusoft",
     companyUrl: "https://www.argusoft.com/",
     location: "Gandhinagar, Gujarat",

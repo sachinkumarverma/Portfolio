@@ -1055,6 +1055,61 @@ body {
 
 
 /* ========================
+   SITE FOOTER
+   ======================== */
+.site-footer {
+  border-top: 1px solid var(--border-card);
+  padding: 24px 0;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-copyright {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.footer-social-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-social-links .social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+@media (max-width: 640px) {
+  .footer-inner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .footer-copyright {
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-social-links {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* ========================
    ACCESSIBILITY & FOCUS VISIBLE
    ======================== */
 a:focus-visible,

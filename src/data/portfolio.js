@@ -88,8 +88,8 @@ export const projectsData = [
     githubUrl: "https://github.com/sachinkumarverma/Aradhna-Marg",
     liveUrl: "https://aradhnamarg.com/",
     previews: [
-      "/projects/project1-preview1.png",
-      "/projects/project1-preview2.png",
+      "/projects/project1-preview1.webp",
+      "/projects/project1-preview2.webp",
     ],
   },
   {
@@ -111,8 +111,8 @@ export const projectsData = [
     githubUrl: "https://github.com/sachinkumarverma/SkillNora",
     liveUrl: "https://skillnora.vercel.app/",
     previews: [
-      "/projects/project2-preview1.png",
-      "/projects/project2-preview2.png",
+      "/projects/project2-preview1.webp",
+      "/projects/project2-preview2.webp",
     ],
   },
   {
@@ -134,8 +134,8 @@ export const projectsData = [
     githubUrl: "https://github.com/sachinkumarverma/Viewtube",
     liveUrl: "https://viewtube-app.vercel.app/",
     previews: [
-      "/projects/project3-preview1.png",
-      "/projects/project3-preview2.png",
+      "/projects/project3-preview1.webp",
+      "/projects/project3-preview2.webp",
     ],
   },
   {
@@ -157,8 +157,8 @@ export const projectsData = [
     githubUrl: "https://gitlab.com/sachinv1410/hospiq",
     liveUrl: "https://hospiq-admin.vercel.app/",
     previews: [
-      "/projects/project4-preview1.png",
-      "/projects/project4-preview2.png",
+      "/projects/project4-preview1.webp",
+      "/projects/project4-preview2.webp",
     ],
   },
   {
@@ -180,8 +180,8 @@ export const projectsData = [
     githubUrl: "https://github.com/sachinkumarverma/ClipVora",
     liveUrl: "https://clipvora.vercel.app/",
     previews: [
-      "/projects/project5-preview1.png",
-      "/projects/project5-preview2.png",
+      "/projects/project5-preview1.webp",
+      "/projects/project5-preview2.webp",
     ],
   },
   {
@@ -203,8 +203,8 @@ export const projectsData = [
     githubUrl: "https://github.com/sachinkumarverma/CVPilot",
     liveUrl: "https://cv-pilot-ai.vercel.app/",
     previews: [
-      "/projects/project6-preview1.png",
-      "/projects/project6-preview2.png",
+      "/projects/project6-preview1.webp",
+      "/projects/project6-preview2.webp",
     ],
   },
 ];

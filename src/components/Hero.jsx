@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Mail, Download, ArrowDown, Briefcase } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./icons";
 import { personalInfo } from "../data/portfolio";
-import profileImg from "../assets/sachin.png";
+import profileImg from "../assets/sachin.webp";
 
 const fadeChild = (delay = 0) => ({
   initial: { opacity: 0 },
@@ -161,7 +161,16 @@ export default function Hero() {
                 alignItems: "center",
                 justifyContent: "center",
               }}>
-                <img src={profileImg} alt={personalInfo.name} className="profile-pic" />
+                <img
+                  src={profileImg}
+                  alt={personalInfo.name}
+                  className="profile-pic"
+                  width="400"
+                  height="400"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                />
               </div>
             </div>
 

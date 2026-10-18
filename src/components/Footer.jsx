@@ -6,13 +6,13 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer style={{ borderTop: "1px solid var(--border-card)", padding: "20px 0" }}>
-      <div className="container-main" style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: 16, flexWrap: "wrap" }}>
-        <p style={{ fontSize: "0.875rem", color: "var(--text-muted)" }}>
+    <footer className="site-footer">
+      <div className="container-main footer-inner">
+        <p className="footer-copyright">
           &copy; {year} {personalInfo.name}. All rights reserved.
         </p>
 
-        <div style={{ display: "flex", gap: 20 }}>
+        <div className="footer-social-links">
           {[
             { icon: GithubIcon, href: personalInfo.github, label: "GitHub" },
             { icon: LinkedinIcon, href: personalInfo.linkedin, label: "LinkedIn" },
@@ -25,7 +25,6 @@ export default function Footer() {
               rel={label !== "Email" ? "noopener noreferrer" : undefined}
               aria-label={label}
               className="social-link"
-              style={{ width: 40, height: 40, borderRadius: 10 }}
             >
               <Icon size={18} />
             </a>

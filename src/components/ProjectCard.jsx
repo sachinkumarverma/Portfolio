@@ -46,7 +46,7 @@ export default function ProjectCard({ project, index }) {
         }}
       >
         {/* 1. Project preview image / Carousel */}
-        <div style={{ position: "relative", width: "100%", height: 200, overflow: "hidden", flexShrink: 0 }}>
+        <div style={{ position: "relative", width: "100%", height: 200, overflow: "hidden", flexShrink: 0, background: "rgba(15, 23, 42, 0.6)" }}>
           {hasPreviews ? (
             <>
               {/* Seamless Right-to-Left unidirectional slide */}
@@ -83,7 +83,7 @@ export default function ProjectCard({ project, index }) {
                   <img
                     src={project.previews[current]}
                     alt={altText}
-                    loading="lazy"
+                    loading={index < 2 ? "eager" : "lazy"}
                     decoding="async"
                     style={{
                       position: "relative",

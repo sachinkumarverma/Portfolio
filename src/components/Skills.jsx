@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { Monitor, Code2, Database, Smartphone, FlaskConical, Wrench } from "lucide-react";
+import { Monitor, Code2, Database, Smartphone, FlaskConical, Wrench, Cpu, Cloud } from "lucide-react";
 import { skillsData } from "../data/portfolio";
 import SectionHeader from "./SectionHeader";
 
-const iconMap = { Monitor, Code2, Database, Smartphone, FlaskConical, Wrench };
+const iconMap = { Monitor, Code2, Database, Smartphone, FlaskConical, Wrench, Cpu, Cloud };
 
 export default function Skills() {
   return (
@@ -13,7 +13,7 @@ export default function Skills() {
 
         <div className="grid-skills">
           {skillsData.categories.map((cat, i) => {
-            const Icon = iconMap[cat.icon];
+            const Icon = iconMap[cat.icon] || Code2;
             return (
               <motion.div
                 key={cat.title}

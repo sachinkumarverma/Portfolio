@@ -601,6 +601,82 @@ body {
 @media (min-width: 1024px) { .grid-about { grid-template-columns: 1fr 1fr; gap: 80px; } }
 
 /* ========================
+   ABOUT METRICS & EDUCATION
+   ======================== */
+.about-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  .about-metrics-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
+
+.about-metric-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 18px;
+  padding: 24px 20px;
+  text-align: center;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+.about-metric-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.about-metric-card:hover {
+  border-color: var(--border-card-hover);
+  box-shadow: 0 10px 30px var(--bg-card-hover-shadow);
+  transform: translateY(-4px);
+}
+.about-metric-card:hover::before {
+  opacity: 1;
+}
+
+.about-metric-value {
+  font-size: clamp(2rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.02em;
+}
+
+.about-metric-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.about-metric-desc {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.education-card {
+  transition: all 0.3s ease;
+}
+.education-card:hover {
+  border-color: var(--border-card-hover);
+}
+
+/* ========================
    HERO LAYOUT & ACTIONS
    ======================== */
 .hero-layout {

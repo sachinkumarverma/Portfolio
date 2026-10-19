@@ -49,7 +49,7 @@ export default function Experience() {
 
                 <div className="timeline-card">
                   <motion.div whileHover={{ y: -4 }} transition={{ duration: 0.3 }} className="card">
-                    <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: 24, gap: 16 }}>
+                    <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: 20, gap: 16 }}>
                       <div>
                         <h3 style={{ fontSize: "1.35rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: 4 }}>{exp.role}</h3>
                         {exp.companyUrl && exp.companyUrl !== "#" ? (
@@ -73,6 +73,20 @@ export default function Experience() {
                         </span>
                       )}
                     </div>
+
+                    {exp.summary && (
+                      <p style={{ fontSize: "0.95rem", lineHeight: 1.65, color: "var(--text-body)", marginBottom: 16 }}>
+                        {exp.summary}
+                      </p>
+                    )}
+
+                    {exp.tags && (
+                      <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 20 }}>
+                        {exp.tags.map((tag) => (
+                          <span key={tag} className="tag" style={{ fontSize: "0.75rem" }}>{tag}</span>
+                        ))}
+                      </div>
+                    )}
 
                     <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 14 }}>
                       {exp.responsibilities.map((item, j) => (

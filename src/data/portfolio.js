@@ -3,10 +3,10 @@ export const personalInfo = {
   initials: "SV",
   title: "Solution Analyst",
   subtitle:
-    "Full-Stack Engineer at Argusoft building reliable web and mobile products with React, Node.js, and React Native.",
+    "Solution Analyst at Argusoft building and modernizing production-grade web, mobile, and agentic AI systems.",
   description:
-    "Specializing in React, Node.js, and cross-platform mobile development. I build performant, test-driven applications with clean architecture and modern best practices.",
-  location: "India",
+    "With 3+ years of experience across healthcare, enterprise, and client analytics platforms, I build high-reliability web architectures, cross-platform mobile apps, and autonomous agentic workflows with React, TypeScript, NestJS, Node.js, and React Native.",
+  location: "Gandhinagar, India",
   email: "sachinv1410@gmail.com",
   github: "https://github.com/sachinkumarverma",
   linkedin: "https://linkedin.com/in/sachin-kumar-verma",
@@ -17,16 +17,25 @@ export const personalInfo = {
 };
 
 export const aboutData = {
-  heading: "Building Solutions That Scale",
+  heading: "Architecting Resilient Full-Stack & Agentic AI Solutions",
   bio: [
-    "I’m a software developer focused on mobile development, building fast, stable iOS and Android applications with React Native. Over the past three years at Argusoft, I’ve progressed from an entry-level engineer to a Solution Analyst by working deeply on clean architecture, cross-platform performance, and reliable software.",
-    "React Native is my primary tool, and I enjoy solving the platform-specific challenges that arise across iOS and Android—from performance bottlenecks and lifecycle edge cases to native integrations and release stability.",
-    "Beyond mobile, I work across the web stack with React and Vue.js on the frontend and Node.js on the backend. This broader perspective helps me understand how mobile applications fit into the larger system. I’m motivated by difficult engineering problems, continuous learning, and building software that remains dependable as it grows.",
+    "I am a software engineer with 3+ years of professional experience building, modernizing, and scaling production-grade web, mobile, and backend systems. Over my journey at Argusoft—progressing from Programmer Analyst Trainee to Programmer Analyst and now Solution Analyst—I've led mission-critical enterprise migrations, autonomous AI platforms, and real-time healthcare applications.",
+    "On the web and backend stack, I've architected real-time client-risk analytics platforms with NestJS, WebSockets, and PostgreSQL, and modernized core enterprise systems for a Big Four audit firm—migrating 25+ modules to Vue 3 (Composition API), upgrading microservices to .NET 10, and scaling Vitest test coverage to 90% across 1,200+ files.",
+    "In mobile development, I engineer clinical communication workflows like TriageStat with React Native and Expo (SDK 50–53), delivering WebRTC video calling and VoIP background push notifications on Android 8–16 and iOS for 500+ active healthcare professionals.",
   ],
   highlights: [
     { icon: "Briefcase", text: "3+ Years Professional Experience" },
-    { icon: "MapPin", text: "Based in Gandhinagar, Gujarat" },
+    { icon: "Cpu", text: "Agentic AI & Real-Time Analytics" },
+    { icon: "Building2", text: "Enterprise & Big Four Modernization" },
+    { icon: "MapPin", text: "Based in Gandhinagar, India" },
   ],
+  education: {
+    institution: "Sagar Institute of Research and Technology (SIRTS)",
+    degree: "B.Tech in Computer Science",
+    grade: "8.23 CGPA",
+    period: "Jul 2019 – May 2023",
+    location: "Bhopal, India",
+  },
 };
 
 export const experienceData = [
@@ -36,55 +45,67 @@ export const experienceData = [
     company: "Argusoft",
     companyUrl: "https://www.argusoft.com/",
     location: "Gandhinagar, Gujarat",
-    period: "Jan 2024 - Present",
+    period: "July 2025 – Present",
     type: "current",
     badge: null,
     responsibilities: [
-      "Built and maintained full-stack web applications using React and Node.js, serving enterprise-grade features to production users.",
-      "Developed and shipped native Android (Kotlin) and iOS (Swift) modules, integrating them with existing web services for a unified cross-platform experience.",
-      "Implemented comprehensive test suites — unit tests for React components (Vitest/React Testing Library) and backend API validation (Mocha/Supertest) to ensure software reliability and prevent regressions.",
-      "Designed RESTful APIs and integrated third-party services including payment gateways and push notification systems.",
-      "Collaborated with cross-functional teams in agile sprints, conducting code reviews and driving CI/CD pipeline improvements.",
+      "Built an agentic AI client-risk analytics platform using React, TypeScript, NestJS, PostgreSQL, and WebSockets to investigate client sentiment, operational issues, CSAT, and ticket trends.",
+      "Engineered end-to-end client data ingestion workflows with automated review checkpoints and resilient recovery mechanisms, reducing manual intervention and ensuring traceable inputs for risk analytics.",
+      "Modernized mission-critical enterprise workflows for a Big Four audit firm, migrating 25+ frontend modules from Vue 2 to Vue 3 (Composition API) and upgrading core backend microservices from .NET 8 to .NET 10.",
+      "Automated database and cloud storage maintenance with index-rebuild cron jobs and implemented application-level database security roles to safeguard data access.",
+      "Expanded frontend test coverage to 90% by authoring and maintaining Vitest unit test suites across 1,200+ files and supporting Azure DevOps CI/CD deployment pipelines.",
     ],
   },
   {
     id: 2,
-    role: "Software Developer Intern",
+    role: "Programmer Analyst",
     company: "Argusoft",
     companyUrl: "https://www.argusoft.com/",
     location: "Gandhinagar, Gujarat",
-    period: "July 2023 - Dec 2023",
+    period: "Jan 2024 – Jun 2025",
     type: "past",
     badge: null,
     responsibilities: [
-      "Developed responsive web interfaces with React and Tailwind CSS, following pixel-perfect designs from Figma.",
-      "Contributed to backend services using Express.js and MongoDB, writing unit tests for every new API endpoint.",
-      "Built a hybrid mobile feature using React Native that shipped to both Android and iOS app stores.",
+      "Developed React Native clinical care communication workflows for TriageStat, enabling 500+ healthcare professionals to coordinate patient care and share clinical data in real time.",
+      "Implemented push notifications and WebRTC video calling on Android 8–16 (handling foreground, background, and locked-screen states) while resolving iOS compatibility, permissions, and media handling.",
+      "Modernized the mobile application from class to functional components with an Expo SDK 50–53 upgrade, resolving native dependency issues and validating production Android builds.",
+      "Designed RESTful APIs in Node.js and SQL Server with parameterized queries, integrating third-party services and optimizing payload delivery for mobile networks.",
+    ],
+  },
+  {
+    id: 3,
+    role: "Programmer Analyst Trainee",
+    company: "Argusoft",
+    companyUrl: "https://www.argusoft.com/",
+    location: "Gandhinagar, Gujarat",
+    period: "July 2023 – Dec 2023",
+    type: "past",
+    badge: null,
+    responsibilities: [
+      "Developed responsive, accessible web interfaces with React, JavaScript, and Tailwind CSS, adhering strictly to pixel-perfect Figma designs.",
+      "Contributed to backend API endpoints using Express.js and MongoDB, authoring unit tests for newly introduced service logic.",
+      "Built cross-platform mobile features using React Native and assisted senior developers with code reviews, bug fixes, and sprint deliverables.",
     ],
   },
 ];
 
-// To add preview images for the carousel:
-// 1. Place screenshots in public/projects/ (e.g., public/projects/project-one-1.png)
-// 2. Add paths to the "previews" array below
-// 3. Set "liveUrl" to your deployed site URL
 export const projectsData = [
   {
     id: 1,
-    title: "Aradhna Marg — Devotional Website",
+    title: "Aradhna Marg — Bilingual Platform & Agentic AI CMS",
     projectType: "Independent Project",
     description:
-      "An independently built Hindi and English devotional website for exploring bhajans, spiritual articles, festivals, deities, and other religious content.",
+      "A production-grade bilingual platform and CMS built with React, TypeScript, Node.js, and PostgreSQL, featuring an autonomous Agentic AI framework with permission governance and multi-host routing.",
     purpose:
-      "Make devotional content easier to browse and discover in Hindi and English.",
+      "Provide high-traffic public exploration of spiritual content while empowering administrative teams with autonomous AI auditing and content workflows.",
     whatIBuilt:
-      "Built the public content experience, category and discovery flows, responsive UI, SEO metadata, and deployment for the live website.",
+      "Architected multi-host routing isolating public traffic (aradhnamarg.com) from admin dashboards, built an autonomous Agentic AI framework (SEO audit, content quality, system health) with human-in-the-loop proposal reviews, automated cron background queues, and optimized B-tree indexes for sub-millisecond queries.",
     technicalChallenge:
-      "Organizing multilingual devotional content into clear, discoverable, and easy-to-navigate pages.",
+      "Building a safe Agentic AI framework with Tier 1–5 permission governance ensuring automated tools never mutate live data without review, alongside concurrency-safe background job scheduling with PostgreSQL row locks.",
     outcome:
-      "A live devotional website available at https://aradhnamarg.com/",
+      "A live, high-performance production platform with sub-millisecond query responses and automated background AI processing.",
     credentials: null,
-    tags: ["React", "TypeScript", "Tailwind CSS", "Supabase"],
+    tags: ["React", "TypeScript", "Node.js", "PostgreSQL", "Agentic AI", "Tailwind CSS"],
     githubUrl: "https://github.com/sachinkumarverma/Aradhna-Marg",
     liveUrl: "https://aradhnamarg.com/",
     previews: [
@@ -94,20 +115,20 @@ export const projectsData = [
   },
   {
     id: 2,
-    title: "SkillNora",
+    title: "SkillNora — Intelligent Learning Platform",
     projectType: "Independent Project",
     description:
-      "A full-stack learning platform featuring structured courses, interactive lecture players, role-based dashboards, and payment gateway integration.",
+      "An intelligent full-stack learning platform powered by Groq LLaMA featuring activity-based recommendations, AI-generated assessments, proctoring controls, and role-based access.",
     purpose:
-      "Build a modern web application for publishing educational courses and tracking individual student learning progress.",
+      "Build a modern AI-powered learning system with automated assessment generation, timed proctoring, and granular student analytics.",
     whatIBuilt:
-      "Developed the Next.js frontend, course browsing and lecture player interfaces, role-based dashboards (student, instructor, admin), Express backend API, and Razorpay checkout workflow.",
+      "Developed the Next.js frontend, AI assessment generator with Groq LLaMA, timed test runner with answer auto-save, proctoring controls, rank analytics, role-based access control (RBAC), Express backend API, and webhook verification.",
     technicalChallenge:
-      "Designing role-based access control and state synchronization between the Next.js frontend and Express/Supabase backend.",
+      "Integrating fast LLM streaming for real-time assessment generation and synchronizing auto-saved exam states with role-based webhook verification.",
     outcome:
-      "A deployed full-stack web application with open-source repositories.",
+      "A live full-stack AI learning platform with public repository and active user assessments.",
     credentials: null,
-    tags: ["Next.js", "TypeScript", "Node.js", "Express", "Supabase"],
+    tags: ["Next.js", "TypeScript", "Groq LLaMA", "Node.js", "Express", "Supabase"],
     githubUrl: "https://github.com/sachinkumarverma/SkillNora",
     liveUrl: "https://skillnora.vercel.app/",
     previews: [
@@ -212,34 +233,34 @@ export const projectsData = [
 export const skillsData = {
   categories: [
     {
-      title: "Frontend",
+      title: "Frontend Development",
       icon: "Monitor",
-      skills: ["React", "Next.js", "Vue.js", "TypeScript", "Tailwind CSS"],
+      skills: ["React", "Vue.js (Vue 3)", "TypeScript", "JavaScript", "Next.js", "Tailwind CSS", "HTML5/CSS3"],
     },
     {
-      title: "Backend",
-      icon: "Code2",
-      skills: ["Node.js", "Express.js", "REST API", "GraphQL", "WebSockets"],
+      title: "Backend & AI Systems",
+      icon: "Cpu",
+      skills: ["Node.js", "NestJS", "Express.js", ".NET 10 / 8", "WebSockets", "REST APIs", "Agentic AI Workflows"],
     },
     {
-      title: "Mobile",
+      title: "Mobile Engineering",
       icon: "Smartphone",
-      skills: ["React Native", "Android (Kotlin)", "iOS (Swift)", "Expo"],
+      skills: ["React Native", "Expo SDK 50–53", "Android (Kotlin)", "iOS (Swift)", "WebRTC Video", "VoIP Push Notifications"],
     },
     {
-      title: "Testing",
-      icon: "FlaskConical",
-      skills: ["Vitest", "React Testing Library", "Mocha", "Supertest", "Cypress"],
-    },
-    {
-      title: "Databases",
+      title: "Databases & Optimization",
       icon: "Database",
-      skills: ["PostgreSQL", "MongoDB", "MySQL", "Redis", "Prisma"],
+      skills: ["PostgreSQL", "SQL Server", "SQL", "Database Optimization", "B-Tree Indexes", "MongoDB", "Redis"],
     },
     {
-      title: "Tools & DevOps",
-      icon: "Wrench",
-      skills: ["Git/GitHub", "CI/CD", "Docker", "Figma", "Linux"],
+      title: "Cloud & DevOps",
+      icon: "Cloud",
+      skills: ["Azure DevOps", "Azure Storage", "Azure Functions", "Docker", "CI/CD Pipelines", "Vercel", "Git / GitHub"],
+    },
+    {
+      title: "Testing & Automation",
+      icon: "FlaskConical",
+      skills: ["Vitest (90% Coverage)", "Jest", "Cypress", "React Testing Library", "Unit & E2E Testing", "Test Automation"],
     },
   ],
 };

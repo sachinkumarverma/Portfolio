@@ -19,8 +19,8 @@ export default function Contact() {
           <h2 style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: 28, letterSpacing: "-0.02em" }}>
             Let's Connect
           </h2>
-          <p style={{ fontSize: "1.1rem", lineHeight: 1.8, color: "var(--text-secondary)", marginBottom: 48, maxWidth: 580, marginLeft: "auto", marginRight: "auto" }}>
-            I'm open to full-time software engineering opportunities in React, Node.js, and mobile development. If you're hiring for a product-focused engineering role, I'd be happy to connect.
+          <p style={{ fontSize: "1.1rem", lineHeight: 1.8, color: "var(--text-secondary)", marginBottom: 48, maxWidth: 620, marginLeft: "auto", marginRight: "auto" }}>
+            I'm open to full-time software engineering opportunities across full-stack web, mobile, backend, and agentic AI systems. If you're building high-impact products or looking for an engineer dedicated to production reliability, let's connect.
           </p>
 
           <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 14 }}>

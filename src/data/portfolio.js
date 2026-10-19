@@ -24,7 +24,6 @@ export const aboutData = {
     "In mobile development, I engineer clinical communication workflows like TriageStat with React Native and Expo (SDK 50–53), delivering WebRTC video calling and VoIP background push notifications on Android 8–16 and iOS for 500+ active healthcare professionals.",
   ],
   highlights: [
-    { icon: "Briefcase", text: "3+ Years Professional Experience" },
     { icon: "Cpu", text: "Agentic AI & Real-Time Analytics" },
     { icon: "Building2", text: "Enterprise & Big Four Modernization" },
     { icon: "MapPin", text: "Based in Gandhinagar, India" },

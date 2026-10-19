@@ -165,8 +165,8 @@ export default function Hero() {
                   src={profileImg}
                   alt={personalInfo.name}
                   className="profile-pic"
-                  width="400"
-                  height="400"
+                  width="480"
+                  height="480"
                   loading="eager"
                   fetchPriority="high"
                   decoding="async"
@@ -179,7 +179,7 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.75, ease: [0.25, 0.4, 0.25, 1] }}
-              style={{ position: "absolute", top: -24, right: -24, background: "var(--bg-card)", backdropFilter: "blur(20px)", border: "1px solid var(--border-card)", borderRadius: 16, padding: "16px 20px", boxShadow: "0 20px 60px rgba(0,0,0,0.2)" }}
+              style={{ position: "absolute", top: -16, right: -12, background: "var(--bg-card)", backdropFilter: "blur(20px)", border: "1px solid var(--border-card)", borderRadius: 16, padding: "16px 20px", boxShadow: "0 20px 60px rgba(0,0,0,0.2)" }}
             >
               <motion.div
                 animate={{ y: [0, -15, 0] }}

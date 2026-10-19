@@ -50,9 +50,9 @@
   --scrollbar-track: #050b18;
   --scrollbar-thumb: #1e3a5f;
 
-  --hero-size: 280px;
-  --hero-inset-1: 20px;
-  --hero-inset-2: 35px;
+  --hero-size: 320px;
+  --hero-inset-1: 14px;
+  --hero-inset-2: 24px;
 }
 
 [data-theme="light"] {
@@ -104,17 +104,17 @@
 
 @media (min-width: 768px) {
   :root {
-    --hero-size: 340px;
-    --hero-inset-1: 25px;
-    --hero-inset-2: 45px;
+    --hero-size: 390px;
+    --hero-inset-1: 16px;
+    --hero-inset-2: 28px;
   }
 }
 
 @media (min-width: 1024px) {
   :root {
-    --hero-size: 400px;
-    --hero-inset-1: 30px;
-    --hero-inset-2: 50px;
+    --hero-size: 470px;
+    --hero-inset-1: 18px;
+    --hero-inset-2: 32px;
   }
 }
 
@@ -761,7 +761,14 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 20%;
+  transform: scale(1.08);
   border-radius: 50%;
+  transition: transform 0.4s ease;
+}
+
+.hero-visual:hover .profile-pic {
+  transform: scale(1.12);
 }
 
 /* ========================
